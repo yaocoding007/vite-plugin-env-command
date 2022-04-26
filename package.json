@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-env-command",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "获取package.json中scripts里指令上的参数(build:test->test)添加到环境变量中",
   "keywords": [
     "env",
