@@ -1,0 +1,44 @@
+{
+  "name": "vite-plugin-env-command",
+  "version": "1.0.0",
+  "description": "Easily expose environment variables by command argument in Vite.js",
+  "keywords": [
+    "env",
+    "environment",
+    "variables",
+    "vite",
+    "vite-plugin",
+    "vitejs"
+  ],
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --dts --format cjs,esm --clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaocoding007/vite-plugin-env-command"
+  },
+  "homepage": "https://github.com/yaocoding007/vite-plugin-env-command",
+  "dependencies": {
+    "@types/node": "^17.0.27",
+    "tsup": "^5.12.6",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.5"
+  }
+}

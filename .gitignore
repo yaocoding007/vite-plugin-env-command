@@ -1,0 +1,22 @@
+/.bundle
+pkg
+log
+tmp
+node_modules
+.byebug_history
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+gemfiles/*.lock
+.DS_Store
+
+# Vite on Rails
+/public/vite
+/public/vite-dev
+/public/vite-test
+test/test_app/public/vite-production
+node_modules
+*.local
+.DS_Store
+
+dist
