@@ -1,6 +1,6 @@
 <h2 align='center'><samp>vite-plugin-env-command</samp></h2>
 
-<p align='center'>Expose environment variables by command argument to your client code in <samp>Vite.js</samp></p>
+<p align='center'>在<samp>Vite.js</samp>项目中获取package.json中scripts里指令上的参数(build:test->test)添加到环境变量中 </p>
 
 
 ## Why? 🤔
