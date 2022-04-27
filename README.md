@@ -20,6 +20,40 @@ npm i -D vite-plugin-env-command # yarn add -D vite-plugin-env-command
 
 ```
 
+### Options 🎁
+
+```js
+
+/**
+ * 获取指令上的参数
+ * 
+ * @example  yarn start -> undefined
+ * @example  yarn start:staging -> 'staging'
+*/
+getCommandArgv()
+
+
+/****——————————————————————————**/
+
+interface Options {
+  /**
+   * 设置在 process.env上的key
+   * 可选参数 默认值是 APP_ENV
+  */
+  key?: 'string'
+  /**
+   * 指令上为设置参数时的默认值 
+   * 可选参数 默认值是 dev
+   * @example yarn start -> 'dev'
+  */
+  defaultEnv?: 'string'
+}
+
+SetEnvByCommandArg(options?:Options)
+
+```
+
+
 ## Usage 🚀
 
 在vite.config.ts中设置如下:
