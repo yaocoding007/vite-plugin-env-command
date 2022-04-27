@@ -22,7 +22,7 @@ npm i -D vite-plugin-env-command # yarn add -D vite-plugin-env-command
 
 ## Usage 🚀
 
-在vite.config.t中设置如下:
+在vite.config.ts中设置如下:
 
 ```js
 
@@ -39,8 +39,26 @@ export default defineConfig({
 })
 
 ```
+在package.json设置指令
+```
+"scripts": {
+  "start": "vite",
+  "start:staging": "vite",
+  "start:prod": "vite",
+  "build": "tsc && vite build",
+  "build:test": "tsc && vite build",
+  "build:staging": "tsc && vite build",
+  "build:prod": "tsc && vite build",
+}
+```
+
+
+
 在代码这样使用:
 
 ```js
+// 这样就可以取到指令":"后的参数了 
+// yarn build:staging 
+// appMode === 'staging'
 const appMode = process.env.APP_ENV;
 ```
