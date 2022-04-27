@@ -28,11 +28,11 @@ npm i -D vite-plugin-env-command # yarn add -D vite-plugin-env-command
 
 import { defineConfig } from 'vite'
 
-import CommandSetEnv, { getCommandArgv } from 'vite-plugin-env-command';
+import SetEnvByCommandArg, { getCommandArgv } from 'vite-plugin-env-command';
 
 export default defineConfig({
   plugins: [
-    CommandSetEnv({
+    SetEnvByCommandArg({
         key: "APP_ENV",
     }),
   ],
@@ -54,7 +54,7 @@ export default defineConfig({
 
 
 
-在代码这样使用:
+在代码里这样获取参数:
 
 ```js
 // 这样就可以取到指令":"后的参数了 
