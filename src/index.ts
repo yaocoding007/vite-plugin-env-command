@@ -30,8 +30,8 @@ interface Options {
  * @param options?: {defaultEnv = 'dev', key = 'APP_ENV'}} 
  * @returns 
  */
-export default function CommandSetEnv(options: Options) {
-    const { defaultEnv = 'dev', key = 'APP_ENV' } = options;
+export default function CommandSetEnv(options?: Options) {
+    const { defaultEnv = 'dev', key = 'APP_ENV' } = options || {};
     const commandArgs = getCommandArgv() || defaultEnv;
 
     return {
