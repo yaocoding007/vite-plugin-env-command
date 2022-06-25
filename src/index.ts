@@ -18,8 +18,12 @@ interface Options {
  * 从 npm_config_argv 获取指令上的参数
  * @example yarn start:test -> test
  */
- export const getCommandArgv = () => {
-    const {original} = JSON.parse(process.env.npm_config_argv || '');
+export const getCommandArgv = () => {
+    const argv = process.env?.npm_config_argv;
+    if (!argv) {
+        throw new Error('npm_config_argv is not defined, please upgrade your npm');
+    }
+    const {original} = JSON.parse(argv || '');
     const commandAll = original[0];
     const [_, env] = commandAll.split(':');
     return env
