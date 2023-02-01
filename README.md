@@ -3,8 +3,6 @@
 <p align='center'>在<samp>Vite.js</samp>项目中获取package.json中scripts里指令上的参数(build:test->test)添加到环境变量中 </p>
 
 
-## ⚠️ npm@7.0.x 的版本 无法通过 npm_config_argv 获取指令 建议升级 npm 版本
-
 ## Why? 🤔
 当我们想去在不用的环境有不用的设置的时候
 官方提供的.env .env.test 文件的形式 未免有点太繁琐了

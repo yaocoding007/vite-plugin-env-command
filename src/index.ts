@@ -13,12 +13,15 @@ interface Options {
     key?: string;
 }
 
-
 /**
  * 从 npm_config_argv 获取指令上的参数
  * @example yarn start:test -> test
  */
 export const getCommandArgv = () => {
+    if(process.env?.npm_lifecycle_event) {
+        const [_, env] = process.env?.npm_lifecycle_event.split(':');
+        return env
+    }
     const argv = process.env?.npm_config_argv;
     if (!argv) {
         throw new Error('npm_config_argv is not defined, please upgrade your npm');
